@@ -4,12 +4,12 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
-import { item } from '../models/item.model';
+import { item } from './../models/item.model';
 
 @Component({
   selector: 'app-item-list',
   templateUrl: './item-list.component.html',
-  styleUrls: ['./item-list.component.css']
+  styleUrls: ['./item-list.component.css'],
 })
 export class ItemListComponent implements OnInit {
 
@@ -82,6 +82,8 @@ export class ItemListComponent implements OnInit {
 
   async deleteItem(item: item) {
     console.log(item + " item to delete")
+
+    // need to add another popup that ask if are you sure you want to delete
 
     await this.services.deleteItem(item).subscribe((res: any) => {
       this._snackBar.open("Item was Deleted successfully", "Close", {

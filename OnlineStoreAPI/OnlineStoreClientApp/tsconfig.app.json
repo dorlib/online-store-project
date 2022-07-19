@@ -7,9 +7,10 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts"
-  ],
+    "src/polyfills.ts",
+    "C:/Users/dorli/Desktop/C#/project/OnlineStoreAPI/OnlineStoreClientApp/src/environments/environment.prod.ts"],
+    
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
   ]
 }
